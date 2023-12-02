@@ -1,24 +1,22 @@
 /*************************************************************************
-                           Ensemble  -  description
+                           Xxx  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <Ensemble> (fichier Ensemble.cpp) ------------
+//---------- Réalisation de la classe <Xxx> (fichier Xxx.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
 //-------------------------------------------------------- Include système
-#include <iostream>
-#include <cstring>
 using namespace std;
+#include <iostream>
 
 //------------------------------------------------------ Include personnel
 #include "Maillon.h"
 #include "Trajet.h"
-
 
 //------------------------------------------------------------- Constantes
 
@@ -26,53 +24,47 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 #define MAP
-
-
-void Maillon::AfficherMaillon() const
-{
-    #ifdef MAP
-        cout << "Appel à la méthode de <TrajetSimple>" << endl;
-    #endif 
-    
-    T->Afficher();
-
-   
-}
-void Maillon::ChangerPointeur(Maillon* pointeur)
-{
-    pointeurSuivant = pointeur;
-}
-Maillon* Maillon::GetMaillon()
- {
-    return(pointeurSuivant);
- }
-
-// type Ensemble::Méthode ( liste des paramètres )
+// type Xxx::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
 //} //----- Fin de Méthode
+void Maillon::AfficherMaillon() const{
+    T->Afficher();
+}
+
+void Maillon::ChangerPointeur(Maillon * pointeur){
+    pointeurSuivant = pointeur;
+}
+
+Maillon* Maillon::GetMaillonSuivant(){
+    return(pointeurSuivant);
+}
 
 //-------------------------------------------- Constructeurs - destructeur
 
-Maillon:: Maillon(Trajet* t1, Maillon* ptr=nullptr)
+
+Maillon::Maillon (Trajet * T1, Maillon * pointeur )
 // Algorithme :
+//
 {
-    #ifdef MAP
-        cout << "Appel au constructeur de <Ensemble>" << endl;
-    #endif
-    T = t1;
-    pointeurSuivant = ptr;
-} 
+#ifdef MAP
+    cout << "Appel au constructeur de <Maillon>" << endl;
+#endif
+T = T1;
+pointeurSuivant = pointeur;
+} //----- Fin de Xxx
 
 
-Maillon::~Maillon ()
+Maillon::~Maillon ( )
+// Algorithme :
+//
 {
-    #ifdef MAP
-        cout << "Appel au destructeur de <Ensemble>" << endl;
-    #endif
-}; 
-//----- Fin de ~Trajet
+#ifdef MAP
+    cout << "Appel au destructeur de <Maillon>" << endl;
+#endif
+} //----- Fin de ~Xxx
+
 
 //------------------------------------------------------------------ PRIVE
 

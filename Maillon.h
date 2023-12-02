@@ -1,14 +1,15 @@
 /*************************************************************************
-                           Ensemble  -  description
+                           Xxx  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <Ensemble> (fichier Ensemble.h) ----------------
+//---------- Interface de la classe <Xxx> (fichier Xxx.h) ----------------
 #if ! defined ( MAILLON_H )
 #define MAILLON_H
+
 #include "Trajet.h"
 
 //--------------------------------------------------- Interfaces utilisées
@@ -18,7 +19,7 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Ensemble>
+// Rôle de la classe <Xxx>
 //
 //
 //------------------------------------------------------------------------
@@ -27,46 +28,45 @@ class Maillon
 {
 //----------------------------------------------------------------- PUBLIC
 
-
 public:
 //----------------------------------------------------- Méthodes publiques
     // type Méthode ( liste des paramètres );
-   
-    void AfficherMaillon() const;
-    void ChangerPointeur(Maillon* pointeur);
-    Maillon* GetMaillon();
-    
     // Mode d'emploi :
     //
     // Contrat :
     //
+    void AfficherMaillon() const;
 
-
+    void ChangerPointeur(Maillon * pointeur);
+    
+    Maillon* GetMaillonSuivant ();
 
 //-------------------------------------------- Constructeurs - destructeur
-    Maillon(Trajet* t1, Maillon* ptr);
-    
+
+
+    Maillon (Trajet * T1, Maillon * pointeur =nullptr);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Maillon( ); 
+    virtual ~Maillon ( );
     // Mode d'emploi :
     //
     // Contrat :
     //
+
 //------------------------------------------------------------------ PRIVE
 
 protected:
 //----------------------------------------------------- Méthodes protégées
 
 //----------------------------------------------------- Attributs protégés
-Maillon * pointeurSuivant;
 Trajet * T;
-
+Maillon * pointeurSuivant;
 };
 
-//-------------------------------- Autres définitions dépendantes de <Ensemble>
+//-------------------------------- Autres définitions dépendantes de <Xxx>
 
-#endif // Trajet
+#endif // XXX_H
+
