@@ -64,7 +64,7 @@ void TrajetSimple::Afficher() const
         cout << "Appel à la méthode de <TrajetSimple>" << endl;
     #endif 
     
-    cout << "allant de " << this->depart << " à " << this->arrivee <<endl;
+    cout << "De " << this->depart << " à " << this->arrivee << " en "<< moyTransport <<endl;
 
 }
 //------------------------------------------------------------------ PRIVE

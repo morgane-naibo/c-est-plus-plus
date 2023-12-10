@@ -38,7 +38,7 @@ bool Catalogue::TrouverTrajet(char* ville1, char* ville2)
 {
     Maillon * current = (*list).GetHead();
     Trajet * currentT = ((*current).GetTrajet());
-    while((*current).GetMaillonSuivant() != nullptr && (strcmp((*currentT).GetDepart(),ville1)!=0 && strcmp((*currentT).GetArrivee(),ville2)!=0))
+    while((*current).GetMaillonSuivant() != nullptr && (strcmp((*currentT).GetDepart(),ville1)!=0 || strcmp((*currentT).GetArrivee(),ville2)!=0))
     {
         current= (*current).GetMaillonSuivant();
         currentT = ((*current).GetTrajet());

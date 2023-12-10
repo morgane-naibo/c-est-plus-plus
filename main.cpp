@@ -1,4 +1,4 @@
-
+using namespace std;
 #include <iostream>
 #include <cstring>
 #include "Trajet.h"
@@ -39,8 +39,6 @@ int main()
     voyages.AfficherCatalogue();
     voyages.TrouverTrajet(ville2,ville3);
 */
-
-    // Creer une liste et un catalogue ?
 
     bool premier = true;
     Liste *trajets = nullptr;   

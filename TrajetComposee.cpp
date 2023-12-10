@@ -30,8 +30,11 @@ using namespace std;
 //#define MAP
 void TrajetComposee::Afficher() const
 {
+    printf("Trajet Composé :\r\n");
     trajetsInt->AfficherListe();
 }
+
+
 // type Ensemble::Méthode ( liste des paramètres )
 // Algorithme :
 //
