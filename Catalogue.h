@@ -40,12 +40,6 @@ public:
     //
 
 
-//------------------------------------------------- Surcharge d'opérateurs
-   Catalogue & operator = ( const Catalogue & unCatalogue );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 
 //-------------------------------------------- Constructeurs - destructeur
@@ -69,7 +63,7 @@ protected:
 
 
 //----------------------------------------------------- Attributs protégés
-Liste list;
+Liste * list;
 };
 
 //-------------------------------- Autres définitions dépendantes de <Ensemble>

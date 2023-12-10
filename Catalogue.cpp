@@ -29,34 +29,37 @@ using namespace std;
 #define MAP
 
 
-void AfficherCatalogue() const
+void Catalogue::AfficherCatalogue() const
 {
-    list.AfficherListe();
+    list->AfficherListe();
 }
 
-bool TrouverTrajet(char* ville1, char* ville2)
+bool Catalogue::TrouverTrajet(char* ville1, char* ville2)
 {
-    while(list.GetPointeurSuivant != nullptr && list.GetTrajet(GetDepart()) != ville1 && list.GetTrajet(GetArrivee()) != ville2)
+    Maillon * current = (*list).GetHead();
+    Trajet * currentT = ((*current).GetTrajet());
+    while((*current).GetMaillonSuivant() != nullptr && (strcmp((*currentT).GetDepart(),ville1)!=0 && strcmp((*currentT).GetArrivee(),ville2)!=0))
     {
-        list.MaillonSuivant();
+        current= (*current).GetMaillonSuivant();
+        currentT = ((*current).GetTrajet());
     }
-
-    if (list.GetPointeurSuivant == nullptr && list.GetTrajet(GetDepart()) != ville1 && list.GetTrajet(GetArrivee()) != ville2)
+    if (strcmp((*currentT).GetDepart(),ville1)==0 && strcmp((*currentT).GetArrivee(),ville2)==0)
+    {
+        cout <<"le trajet existe: ";
+        (*currentT).Afficher();
+        return true;
+    }
+    else
     {
         cout << "Le trajet n'existe pas dans catalogue"<<endl;
         return false;
     }
-    else
-    {
-        cout <<"le trajet existe: ";
-        (list.GetTrajet).Afficher();
-        return true;
-    }
+
 }
 
- void AjouterTrajet(Maillon * nouveau)
+ void Catalogue::AjouterTrajet(Maillon * nouveau)
  {
-    
+     list->Insertion(nouveau);
  }
 
 // type Ensemble::Méthode ( liste des paramètres )
@@ -67,11 +70,11 @@ bool TrouverTrajet(char* ville1, char* ville2)
 
 //-------------------------------------------- Constructeurs - destructeur
 
-Catalogue::Catalogue (Liste catList) 
+Catalogue::Catalogue (Liste * catList) 
 // Algorithme :
 {
     #ifdef MAP
-        cout << "Appel au constructeur de <Ensemble>" << endl;
+        cout << "Appel au constructeur de Catalogue" << endl;
     #endif
     list = catList;
 
@@ -81,7 +84,7 @@ Catalogue::Catalogue (Liste catList)
 Catalogue::~Catalogue ( )
 {
     #ifdef MAP
-        cout << "Appel au destructeur de <Ensemble>" << endl;
+        cout << "Appel au destructeur de Catalogue" << endl;
     #endif
 } 
 //----- Fin de ~Trajet

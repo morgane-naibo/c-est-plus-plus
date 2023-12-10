@@ -11,9 +11,10 @@
 //---------------------------------------------------------------- INCLUDE
 
 //-------------------------------------------------------- Include système
+using namespace std;
 #include <iostream>
 #include <cstring>
-using namespace std;
+
 
 //------------------------------------------------------ Include personnel
 #include "TrajetComposee.h"
@@ -26,7 +27,7 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-#define MAP
+//#define MAP
 void TrajetComposee::Afficher() const
 {
     trajetsInt->AfficherListe();
@@ -58,7 +59,7 @@ TrajetComposee::~TrajetComposee ()
 //----- Fin de ~Trajet
 
 
-void TrajetComposee::Afficher() const
+/*void TrajetComposee::Afficher() const
 {
     #ifdef MAP
         cout << "Appel à la méthode de <TrajetComposee>" << endl;
@@ -66,6 +67,10 @@ void TrajetComposee::Afficher() const
     
     cout << "allant de" << this->depart << "à" << this->arrivee <<endl;
 
+}*/
+
+Liste *  TrajetComposee::getListInt(){
+    return trajetsInt;
 }
 //------------------------------------------------------------------ PRIVE
 

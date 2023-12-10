@@ -46,7 +46,7 @@ Trajet::Trajet (char* ville1, char* ville2)
 // Algorithme :
 {
     #ifdef MAP
-        cout << "Appel au constructeur de <Ensemble>" << endl;
+        cout << "Appel au constructeur de Trajet" << endl;
     #endif
 
     this->depart = new char[strlen(ville1)+1];
@@ -61,7 +61,7 @@ Trajet::Trajet (char* ville1, char* ville2)
 Trajet::~Trajet ( )
 {
     #ifdef MAP
-        cout << "Appel au destructeur de <Ensemble>" << endl;
+        cout << "Appel au destructeur de Trajet" << endl;
     #endif
 
     delete [] this->depart;

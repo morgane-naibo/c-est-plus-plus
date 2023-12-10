@@ -35,7 +35,11 @@ public:
     //
     // Contrat :
     //
+    virtual void AfficherListe() const;
+    
+    virtual void Insertion (Maillon* nouveau) ;
 
+    Maillon* GetHead() const;
 
 
 //-------------------------------------------- Constructeurs - destructeur
@@ -52,9 +56,7 @@ public:
     // Contrat :
     //
     
-    virtual void AfficherListe() const;
-    
-    virtual void Insertion (Maillon* nouveau) ;
+
 
 
 //------------------------------------------------------------------ PRIVE

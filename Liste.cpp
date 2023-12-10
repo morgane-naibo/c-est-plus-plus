@@ -19,7 +19,7 @@ using namespace std;
 #include "Liste.h"
 
 //------------------------------------------------------------- Constantes
-#define MAP
+//#define MAP
 
 //----------------------------------------------------------------- PUBLIC
 
@@ -30,6 +30,27 @@ using namespace std;
 //{
 //} //----- Fin de Méthode
 
+void Liste::AfficherListe() const
+{
+Maillon* parcours=this->head;
+while (parcours!=nullptr){ 
+    parcours->AfficherMaillon();
+    parcours=(parcours)->GetMaillonSuivant();
+}
+}
+
+void Liste::Insertion(Maillon* nouveau) 
+{
+Maillon* current = this->head;
+while((*current).GetMaillonSuivant() != nullptr){
+    current= (*current).GetMaillonSuivant();
+}
+current->ChangerPointeur(nouveau);
+}
+
+Maillon* Liste::GetHead() const{
+    return head;
+}
 
 //-------------------------------------------- Constructeurs - destructeur
 
@@ -56,24 +77,6 @@ Liste::~Liste ( )
 #endif
 }
 
-void Liste:: AfficherListe() const
-{
-Maillon* parcours=this->head;
-while (parcours!=nullptr){ 
-    parcours->AfficherMaillon();
-    parcours=(parcours)->GetMaillonSuivant();
-}
-}
-
-void Liste:: Insertion(Maillon* nouveau) 
-{
-if (nouveau!=nullptr){
-    Maillon* tmp = this->head;
-    this->head = nouveau;
-    nouveau->ChangerPointeur(tmp);
-}
-
-}
  //----- Fin de ~Liste
 
 

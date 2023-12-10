@@ -41,6 +41,8 @@ public:
     
     Maillon* GetMaillonSuivant ();
 
+    Trajet* GetTrajet() const;
+
 //-------------------------------------------- Constructeurs - destructeur
 
 

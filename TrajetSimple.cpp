@@ -26,7 +26,7 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-#define MAP
+//#define MAP
 // type Ensemble::Méthode ( liste des paramètres )
 // Algorithme :
 //
@@ -64,7 +64,7 @@ void TrajetSimple::Afficher() const
         cout << "Appel à la méthode de <TrajetSimple>" << endl;
     #endif 
     
-    cout << "allant de" << this->depart << "à" << this->arrivee <<endl;
+    cout << "allant de " << this->depart << " à " << this->arrivee <<endl;
 
 }
 //------------------------------------------------------------------ PRIVE

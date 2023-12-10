@@ -12,6 +12,7 @@
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
+#include "Liste.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
@@ -36,11 +37,13 @@ public:
     // Contrat :
     //
 
+    Liste *  getListInt();
+
 
 
 //-------------------------------------------- Constructeurs - destructeur
 
-  TrajetComposee (char* , char*, char*);
+  TrajetComposee (char* , char*, Liste *);
 
     // Mode d'emploi :
     //

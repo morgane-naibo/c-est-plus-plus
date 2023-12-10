@@ -23,7 +23,7 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-#define MAP
+//#define MAP
 // type Xxx::Méthode ( liste des paramètres )
 // Algorithme :
 //
@@ -38,7 +38,11 @@ void Maillon::ChangerPointeur(Maillon * pointeur){
 }
 
 Maillon* Maillon::GetMaillonSuivant(){
-    return(pointeurSuivant);
+    return pointeurSuivant;
+}
+
+Trajet * Maillon::GetTrajet() const{
+    return T;
 }
 
 //-------------------------------------------- Constructeurs - destructeur
