@@ -33,11 +33,15 @@ public:
 //----------------------------------------------------- Méthodes publiques
     // type Méthode ( liste des paramètres );
     void AfficherCatalogue() const;
+
     bool TrouverTrajet(char* ville1, char* ville2);
+
     void AjouterTrajet(Maillon * nouveau);
     //
     // Contrat :
     //
+
+    bool ChercherTrajet(char* ville1, char* ville2,int index=0);
 
 
 

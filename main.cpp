@@ -16,30 +16,6 @@ void error(void)
 
 int main()
 {
-    /*
-    char * ville1= "L";
-    char * ville2 = "T";
-    char * ville3 = "P";
-    char * moyTransport= "V";
-    TrajetSimple t(ville1, ville2, moyTransport);
-    TrajetSimple t2(ville2, ville3, moyTransport);
-
-    Trajet* ptr;
-    ptr= &t;
-    Maillon* ptr1= nullptr;
-    Maillon m(ptr, ptr1);
-    Maillon m2(&t2,nullptr);
-
-    Liste liste(&m);
-    liste.Insertion(&m2);
-    TrajetComposee t1(ville1,ville3,&liste);
-    Maillon m1(&t1,nullptr);
-    //m1.AfficherMaillon();
-    Catalogue voyages(&liste);
-    voyages.AfficherCatalogue();
-    voyages.TrouverTrajet(ville2,ville3);
-*/
-
     bool premier = true;
     Liste *trajets = nullptr;   
     Catalogue *catalogue = nullptr;
@@ -196,7 +172,10 @@ int main()
             ville2 = strdup(lecture);
             if (catalogue != nullptr)
             {
-                catalogue->TrouverTrajet(ville1, ville2);
+                bool test = catalogue->TrouverTrajet(ville1, ville2);
+                if (test == false){
+                    catalogue->ChercherTrajet(ville1,ville2);
+                }
             }
             else
             {
