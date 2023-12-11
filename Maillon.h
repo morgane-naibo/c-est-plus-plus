@@ -1,9 +1,8 @@
 /*************************************************************************
-                           Xxx  -  description
+                           Maillon  -  description
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
+    début                : $29/11/23$
+    copyright            : Par $Eleonore/Martin/Morgane/Marc$
 *************************************************************************/
 
 //---------- Interface de la classe <Xxx> (fichier Xxx.h) ----------------
