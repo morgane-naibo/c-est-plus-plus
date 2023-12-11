@@ -1,5 +1,7 @@
 /*************************************************************************
-                           Trajet  -  description
+                           Liste  -  
+                           Cette classe represente une liste chainé de 
+                           maillon de type Maillon
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
