@@ -35,36 +35,38 @@ public:
 
     void ChangerPointeur(Maillon * pointeur);
     // Mode d'emploi :
-    // 
+    // Entrée: pointeur sera le pointeur qui sera mis vers le pointeur suivant.
+    // pointeur.
     // Contrat :
     // Aucun
     
     Maillon* GetMaillonSuivant ();
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // Aucun
 
     Trajet* GetTrajet() const;
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // Aucun
 
 //-------------------------------------------- Constructeurs - destructeur
 
 
     Maillon (Trajet * T1, Maillon * pointeur =nullptr);
     // Mode d'emploi :
-    //
+    // Entrée : T1 est la donnée dans le maillon. pointeur représente le pointeur 
+    // suivant de la liste chainé.  
     // Contrat :
-    //
+    // ptr est null s'il n'y a pas de pointeur suivant.
 
     virtual ~Maillon ( );
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // Aucun
 
 //------------------------------------------------------------------ PRIVE
 
