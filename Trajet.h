@@ -48,24 +48,23 @@ public:
 //------------------------------------------------- Surcharge d'opérateurs
    Trajet & operator = ( const Trajet & unTrajet );
     // Mode d'emploi :
-    // 
+    // Entrée : unTrajet est une référence vers un Trajet 
     // Contrat :
-    //
+    // Aucun
 
 
 //-------------------------------------------- Constructeurs - destructeur
    Trajet (char* ville1, char* ville2);
-
     // Mode d'emploi :
-    //
+    // Entrée : ville1 represente la ville de départ et ville2 la ville d'arrivée
     // Contrat :
-    //
+    // Aucun
 
     virtual ~Trajet ( ); 
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // Aucun
 //------------------------------------------------------------------ PRIVE
 
 protected:
@@ -76,7 +75,7 @@ char* depart;
 char* arrivee;
 };
 
-//-------------------------------- Autres définitions dépendantes de <Ensemble>
+//-------------------------------- Autres définitions dépendantes de <Trajet>
 
 #endif // Trajet
 
