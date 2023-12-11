@@ -26,31 +26,39 @@ class Liste
 
 public:
 //----------------------------------------------------- Méthodes publiques
-    // type Méthode ( liste des paramètres );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+
     virtual void AfficherListe() const;
+    // Mode d'emploi :
+    // Aucun
+    // Contrat :
+    // Aucun
     
     virtual void Insertion (Maillon* nouveau) ;
+    // Mode d'emploi : 
+    // Le maillon à insérer à la fin de la liste
+    // Contrat :
+    // Aucun 
 
     Maillon* GetHead() const;
+    // Mode d'emploi :
+    // Aucun
+    // Contrat :
+    // Aucun
 
 
 //-------------------------------------------- Constructeurs - destructeur
 
     Liste (Maillon* first=nullptr);
     // Mode d'emploi :
-    //
-    // Contrat :
-    //
+    // first est un pointeur vers le premier Maillon de la liste.
+    // Contrat : 
+    // Si aucun pointeur n'est donné sa valeur par défaut est nullptr
 
     virtual ~Liste ( );
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // Aucun
     
 
 
@@ -59,7 +67,6 @@ public:
 
 protected:
 //----------------------------------------------------- Méthodes protégées
-
 
 //----------------------------------------------------- Attributs protégés
 Maillon* head;
