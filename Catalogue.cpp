@@ -96,20 +96,19 @@ bool Catalogue::ChercherTrajet(char* ville1, char* ville2,int index)
 //-------------------------------------------- Constructeurs - destructeur
 
 Catalogue::Catalogue (Liste * catList) 
-// Algorithme :
 {
     #ifdef MAP
-        cout << "Appel au constructeur de Catalogue" << endl;
+        cout << "Appel au constructeur de <Catalogue>" << endl;
     #endif
     list = catList;
 
-} //----- Fin de Ensemble
+}
 
 
 Catalogue::~Catalogue ( )
 {
     #ifdef MAP
-        cout << "Appel au destructeur de Catalogue" << endl;
+        cout << "Appel au destructeur de <Catalogue>" << endl;
     #endif
 } 
 //----- Fin de ~Trajet
