@@ -8,7 +8,7 @@
     e-mail               : eleonore.dugast@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la classe <Traket> (fichier Traket.cpp) ------------
+//---------- Réalisation de la classe <Trajet> (fichier Trajet.cpp) ------
 
 //---------------------------------------------------------------- INCLUDE
 
