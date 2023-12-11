@@ -1,7 +1,9 @@
 /*************************************************************************
-                           Ensemble  -  description
+                           Trajet -  C'est une classe abstraite. Elle est mère 
+			   des classes TrajetSimple et TrajetCompose. Elle permet
+			   le partage d'attributs et de méthodes.
                              -------------------
-    début                : $DATE$
+    début                : $22/11/23$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
@@ -31,11 +33,19 @@ public:
     // type Méthode ( liste des paramètres );
     virtual void Afficher() const = 0;
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // C'est une méthode virtuelle.Elle rend la classe abstraite.
     char* GetDepart() const;
+    // Mode d'emploi :
+    // Aucun
+    // Contrat :
+    // Aucun
     char* GetArrivee() const;
+    // Mode d'emploi :
+    // Aucun
+    // Contrat :
+    // Aucun
 
 
 

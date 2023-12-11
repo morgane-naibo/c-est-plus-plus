@@ -1,8 +1,11 @@
 /*************************************************************************
-                           Ensemble  -  description
+                           TrajetCompose -  Cett classe permet d'instancier des 
+			   trajets composés de plusieurs trajets simples. Elle 
+			   utilise notre classe liste pour stocker les trajets 
+			   intermédiares.
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
+    début                : $29/11/23$
+    copyright            : Par $Eléonore/Martin/Morgane/Marc$
     e-mail               : $EMAIL$
 *************************************************************************/
 
@@ -27,19 +30,12 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-//#define MAP
+
 void TrajetComposee::Afficher() const
 {
     printf("Trajet Composé :\r\n");
     trajetsInt->AfficherListe();
 }
-
-
-// type Ensemble::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
 
 //-------------------------------------------- Constructeurs - destructeur
 

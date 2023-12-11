@@ -1,12 +1,13 @@
 /*************************************************************************
-                           Ensemble  -  description
+                           TrajetSimple -  Cette classe permet d'instancier 
+			   des trajets se faisant en une seule étape.
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
+    début                : $22/11/23$
+    copyright            : par $Eleonore/Martin/Morgane/Marc$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <Ensemble> (fichier Ensemble.h) ----------------
+//---------- Interface de la classe <TrajetSimple> (fichier Ensemble.h) ----------------
 #if ! defined ( TRAJETSIMPLE_H )
 #define TRAJETSIMPLE_H
 
@@ -17,7 +18,7 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Ensemble>
+// Rôle de la classe <TrajetSimple>
 //
 //
 //------------------------------------------------------------------------

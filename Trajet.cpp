@@ -1,7 +1,9 @@
 /*************************************************************************
-                           Ensemble  -  description
+                           Trajet -  C'est une classe abstraite. Elle est mère 
+			   des classes TrajetSimple et TrajetCompose. Elle permet
+			   le partage d'attributs et de méthodes.
                              -------------------
-    début                : $DATE$
+    début                : $22/11/23$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
@@ -24,21 +26,15 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-#define MAP
-// type Ensemble::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
-    char* Trajet::GetDepart() const
-    {
-        return(this->depart);
-    }
+char* Trajet::GetDepart() const
+{
+     return(this->depart);
+}
 
-    char* Trajet::GetArrivee() const
-    {
-         return(this->arrivee);
-    }
+char* Trajet::GetArrivee() const
+{
+     return(this->arrivee);
+}
 
 //-------------------------------------------- Constructeurs - destructeur
 

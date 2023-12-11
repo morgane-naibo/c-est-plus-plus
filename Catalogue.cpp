@@ -1,9 +1,14 @@
+#include <stdio.h>
 /*************************************************************************
-                           Ensemble  -  description
+                           Catalogue - 
+			   Cette classe permet de stocker tous les trajets au travers 
+			   d'une instance de la classe Liste. Elle n'a pas énormément
+			   d'intérêt pour notre projet mais permettrait de rentrer plus 
+			   d'informations que la liste de trajets si nous souhaitons 
+			   améliorer notre projet.
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
+    début                : $29/11/23$
+    copyright            : Par $Eleonore/Martin/Morgane/Marc$
 *************************************************************************/
 
 //---------- Réalisation de la classe <Ensemble> (fichier Ensemble.cpp) ------------
@@ -35,10 +40,12 @@ void Catalogue::AfficherCatalogue() const
 }
 
 bool Catalogue::TrouverTrajet(char* ville1, char* ville2)
+// Algorithme : parcours la liste des trajets et renvoie s'il existe un trajet direct entre ville 1 et ville2.
 {
     Maillon * current = (*list).GetHead();
     Trajet * currentT = ((*current).GetTrajet());
     while((*current).GetMaillonSuivant() != nullptr && (strcmp((*currentT).GetDepart(),ville1)!=0 || strcmp((*currentT).GetArrivee(),ville2)!=0))
+    // boucle tant que le trajet direct n'a pas été trouvé
     {
         current= (*current).GetMaillonSuivant();
         currentT = ((*current).GetTrajet());
@@ -57,7 +64,10 @@ bool Catalogue::TrouverTrajet(char* ville1, char* ville2)
 
 }
 
-bool Catalogue::ChercherTrajet(char* ville1, char* ville2,int index){
+bool Catalogue::ChercherTrajet(char* ville1, char* ville2,int index)
+// Algorithme : methode de recherche récursive. On boucle tant qu'on n'a pas trouvé une suite de trajets permettant
+// de partir de ville1 à ville2.
+{
     Maillon * current = (*list).GetHead();
     Trajet * currentT = ((*current).GetTrajet());
     while(current != nullptr && index<100){
@@ -82,12 +92,6 @@ bool Catalogue::ChercherTrajet(char* ville1, char* ville2,int index){
  {
      list->Insertion(nouveau);
  }
-
-// type Ensemble::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
 
 //-------------------------------------------- Constructeurs - destructeur
 

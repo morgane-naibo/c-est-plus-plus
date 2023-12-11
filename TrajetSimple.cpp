@@ -1,12 +1,13 @@
 /*************************************************************************
-                           Ensemble  -  description
+                           TrajetSimple -  Cette classe permet d'instancier 
+			   des trajets se faisant en une seule étape.
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
+    début                : $22/11/23$
+    copyright            : par $Eleonore/Martin/Morgane/Marc$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <Ensemble> (fichier Ensemble.cpp) ------------
+//---------- Réalisation de la classe <TrajetSimple> (fichier TrajetSimple.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
