@@ -1,5 +1,9 @@
 /*************************************************************************
-                           Maillon  -  description
+                           Maillon  -  
+                           La classe Maillon représente les maillons de 
+                           la liste chainée. Un maillon est composé d'un
+                           objet de type Trajet et d'un pointeur vers le
+                           maillon suivant.
                              -------------------
     début                : $29/11/23$
     copyright            : Par $Eleonore/Martin/Morgane/Marc$
@@ -17,30 +21,35 @@
 
 //------------------------------------------------------------------ Types
 
-//------------------------------------------------------------------------
-// Rôle de la classe <Xxx>
-//
-//
-//------------------------------------------------------------------------
-
 class Maillon
 {
 //----------------------------------------------------------------- PUBLIC
 
 public:
 //----------------------------------------------------- Méthodes publiques
-    // type Méthode ( liste des paramètres );
+    void AfficherMaillon() const;
+    // Mode d'emploi :
+    // Aucun
+    // Contrat :
+    // Aucun
+
+    void ChangerPointeur(Maillon * pointeur);
+    // Mode d'emploi :
+    // 
+    // Contrat :
+    // Aucun
+    
+    Maillon* GetMaillonSuivant ();
     // Mode d'emploi :
     //
     // Contrat :
     //
-    void AfficherMaillon() const;
-
-    void ChangerPointeur(Maillon * pointeur);
-    
-    Maillon* GetMaillonSuivant ();
 
     Trajet* GetTrajet() const;
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
 //-------------------------------------------- Constructeurs - destructeur
 
