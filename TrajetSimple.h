@@ -61,6 +61,6 @@ protected:
 char* moyTransport;
 };
 
-//-------------------------------- Autres définitions dépendantes de <Ensemble>
+//-----------------Autres définitions dépendantes de <TrajetSimple>
 
 #endif // Trajet
