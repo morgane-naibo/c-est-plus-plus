@@ -25,15 +25,11 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Trajet::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
+
 
 
 void Liste::AfficherListe() const
-// Algorithme :
+// Algorithme : Affiche les éléments de la liste
 {
 Maillon* parcours=this->head;
 while (parcours!=nullptr){ 
@@ -44,7 +40,7 @@ while (parcours!=nullptr){
 //----- Fin de AfficherListe
 
 void Liste::Insertion(Maillon* nouveau) 
-// Algorithme :
+// Algorithme : Insère un nouveau maillon à la fin de la liste.
 {
 Maillon* current = this->head;
 while((*current).GetMaillonSuivant() != nullptr){
@@ -55,7 +51,7 @@ current->ChangerPointeur(nouveau);
 
 
 Maillon* Liste::GetHead() const
-// Algorithme :
+// Algorithme : Renvoie le pointeur vers le premier maillon de la liste.
 {
     return head;
 } //----- Fin de Liste
@@ -64,18 +60,15 @@ Maillon* Liste::GetHead() const
 
 
 Liste::Liste (Maillon* first)
-// Algorithme :
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Liste>" << endl;
 #endif
 this->head = first;
-} //----- Fin de Liste
+} //----- Fin du constructeur
 
 
-Liste::~Liste ( )
-// Algorithme :
-//
+Liste::~Liste ()
 {
 
 #ifdef MAP
