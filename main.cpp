@@ -40,7 +40,7 @@ int main()
         if (fscanf(stdin, "%99s", lecture) != 1)
             error();
 
-        // INSERTION DE TRAJETS SIMPLES
+        // ---------------- INSERTION DE TRAJETS SIMPLES -------------------------
         if (strcmp(lecture, "TS") == 0)
         {
             char *ville1;
@@ -71,7 +71,8 @@ int main()
                 trajets->Insertion(mts);
             }
         }
-        // INSERTION DE TRAJETS COMPOSES
+        // ----------------  INSERTION DE TRAJETS COMPOSES -------------------------
+            
         else if (strcmp(lecture, "TC") == 0)
         {
             int nbtrajets;
@@ -158,6 +159,9 @@ int main()
                 trajets->Insertion(mtc);
             }
         }
+
+        // -------------------- RECHERCHE DANS LE CATALOGUE ----------------
+            
         else if (strcmp(lecture, "Chercher") == 0)
         {
             char *ville1;
@@ -182,6 +186,9 @@ int main()
                 printf("Le catalogue est vide\r\n");
             }
         }
+            
+        // -------------- AFFICHAGE DE L'ETAT ACTUEL DU CATALOGUE --------------
+            
         else if (strcmp(lecture, "Print") == 0) {
             if (catalogue != nullptr) {
                 catalogue->AfficherCatalogue();
