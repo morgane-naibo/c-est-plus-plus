@@ -1,9 +1,11 @@
 /*************************************************************************
-                           Trajet  -  description
+                           Trajet  -  Cette classe est une classe 
+                           abstraite et mère de TrajetSimple et 
+                           TrajetComposea qui représente un trajet entre 
+                           deux villes.
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
+    début                : $29/11/23$
+    copyright            : Par $Eleonore/Martin/Morgane/Marc$
 *************************************************************************/
 
 //---------- Interface de la classe <Liste> (fichier Ensemble.h) ----------------
