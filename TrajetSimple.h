@@ -4,10 +4,10 @@
                              -------------------
     début                : $22/11/23$
     copyright            : par $Eleonore/Martin/Morgane/Marc$
-    e-mail               : $EMAIL$
+    e-mail               : $eleonore.dugast@insa-lyon.fr$
 *************************************************************************/
 
-//---------- Interface de la classe <TrajetSimple> (fichier Ensemble.h) ----------------
+//---------- Interface de la classe <TrajetSimple> (fichier TrajetSimple.h) ---
 #if ! defined ( TRAJETSIMPLE_H )
 #define TRAJETSIMPLE_H
 
@@ -27,32 +27,30 @@ class TrajetSimple : public Trajet
 {
 //----------------------------------------------------------------- PUBLIC
 
-
 public:
 //----------------------------------------------------- Méthodes publiques
-    // type Méthode ( liste des paramètres );
     virtual void Afficher() const;
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // Aucun
 
 
 
 //-------------------------------------------- Constructeurs - destructeur
 
   TrajetSimple (char* , char*, char*);
-
     // Mode d'emploi :
-    //
+    // Le premier parametre est la ville1, le deuxieme parametre est la ville d'arrivée
+    // Le dernier est le moyen de transport
     // Contrat :
-    //
+    // Aucun
 
     virtual ~TrajetSimple( ); 
     // Mode d'emploi :
-    //
+    // Aucun
     // Contrat :
-    //
+    // Aucun
 //------------------------------------------------------------------ PRIVE
 
 protected:
