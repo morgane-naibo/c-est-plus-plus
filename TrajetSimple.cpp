@@ -20,46 +20,14 @@ using namespace std;
 #include "TrajetSimple.h"
 #include "Trajet.h"
 
-
-
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-//#define MAP
-// type Ensemble::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
-
-//-------------------------------------------- Constructeurs - destructeur
-
-TrajetSimple:: TrajetSimple(char* ville1, char* ville2, char* moyTrans) :Trajet(ville1, ville2)
-// Algorithme :
-{
-    #ifdef MAP
-        cout << "Appel au constructeur de <Ensemble>" << endl;
-    #endif
-
-    this->moyTransport = new char[strlen(moyTrans)+1];
-    strcpy(moyTransport, moyTrans);
-} //----- Fin de Ensemble
-
-
-TrajetSimple::~TrajetSimple ()
-{
-    #ifdef MAP
-        cout << "Appel au destructeur de <Ensemble>" << endl;
-    #endif
-
-    delete [] this->moyTransport;
-}; 
-//----- Fin de ~Trajet
-
-
 void TrajetSimple::Afficher() const
+// Algorithme : affiche les détails du trajet simple, y compris les noms 
+//des villes de départ et d'arrivée ainsi que le moyen de transport.
 {
     #ifdef MAP
         cout << "Appel à la méthode de <TrajetSimple>" << endl;
@@ -68,6 +36,33 @@ void TrajetSimple::Afficher() const
     cout << "De " << this->depart << " à " << this->arrivee << " en "<< moyTransport <<endl;
 
 }
+//----- Fin de Afficher
+
+
+//-------------------------------------------- Constructeurs - destructeur
+
+TrajetSimple:: TrajetSimple(char* ville1, char* ville2, char* moyTrans) :Trajet(ville1, ville2)
+{
+    #ifdef MAP
+        cout << "Appel au constructeur de <TrajetSimple>" << endl;
+    #endif
+
+    this->moyTransport = new char[strlen(moyTrans)+1];
+    strcpy(moyTransport, moyTrans);
+} 
+//----- Fin de TrajetSimple
+
+
+TrajetSimple::~TrajetSimple ()
+{
+    #ifdef MAP
+        cout << "Appel au destructeur de <TrajetSimple>" << endl;
+    #endif
+
+    delete [] this->moyTransport;
+}; 
+//----- Fin de ~Trajet
+
 //------------------------------------------------------------------ PRIVE
 
 //----------------------------------------------------- Méthodes protégées
