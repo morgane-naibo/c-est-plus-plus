@@ -1,7 +1,9 @@
 /*************************************************************************
                            Maillon  -  
                            La classe Maillon représente les maillons de 
-                           la liste chainée.
+                           la liste chainée. Un maillon est composé d'un
+                           objet de type Trajet et d'un pointeur vers le
+                           maillon suivant.
                              -------------------
     début                : $29/11/23$
     copyright            : Par $Eleonore/Martin/Morgane/Marc$
