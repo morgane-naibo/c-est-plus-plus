@@ -1,14 +1,14 @@
 /*************************************************************************
                            Liste  -  
-                           Cette classe represente une liste chainé de 
+                           Cette classe represente une liste chainée de 
                            maillon de type Maillon
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
+    début                : $29/11/2023$
+    copyright            : (C) $2023$ Par $Eleonore/Martin/Morgane/Marc$
+    e-mail               : eleonore.dugast@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la classe <Liste> (fichier Ensemble.cpp) ------------
+//---------- Réalisation de la classe <Liste> (fichier Liste.cpp) -----
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -21,7 +21,6 @@ using namespace std;
 #include "Liste.h"
 
 //------------------------------------------------------------- Constantes
-//#define MAP
 
 //----------------------------------------------------------------- PUBLIC
 
@@ -32,7 +31,9 @@ using namespace std;
 //{
 //} //----- Fin de Méthode
 
+
 void Liste::AfficherListe() const
+// Algorithme :
 {
 Maillon* parcours=this->head;
 while (parcours!=nullptr){ 
@@ -40,32 +41,35 @@ while (parcours!=nullptr){
     parcours=(parcours)->GetMaillonSuivant();
 }
 }
+//----- Fin de AfficherListe
 
 void Liste::Insertion(Maillon* nouveau) 
+// Algorithme :
 {
 Maillon* current = this->head;
 while((*current).GetMaillonSuivant() != nullptr){
     current= (*current).GetMaillonSuivant();
 }
 current->ChangerPointeur(nouveau);
-}
+} //----- Fin de Insertion
 
-Maillon* Liste::GetHead() const{
+
+Maillon* Liste::GetHead() const
+// Algorithme :
+{
     return head;
-}
+} //----- Fin de Liste
 
 //-------------------------------------------- Constructeurs - destructeur
 
 
 Liste::Liste (Maillon* first)
 // Algorithme :
-//
 {
-this->head = first;
-
 #ifdef MAP
     cout << "Appel au constructeur de <Liste>" << endl;
 #endif
+this->head = first;
 } //----- Fin de Liste
 
 
@@ -78,8 +82,7 @@ Liste::~Liste ( )
     cout << "Appel au destructeur de <Liste>" << endl;
 #endif
 }
-
- //----- Fin de ~Liste
+//----- Fin de ~Liste
 
 
 //------------------------------------------------------------------ PRIVE
