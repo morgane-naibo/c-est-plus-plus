@@ -20,12 +20,6 @@
 
 //------------------------------------------------------------------ Types
 
-//------------------------------------------------------------------------
-// Rôle de la classe <Ensemble>
-//
-//
-//------------------------------------------------------------------------
-
 class TrajetComposee : public Trajet
 {
 //----------------------------------------------------------------- PUBLIC
@@ -56,13 +50,14 @@ public:
     // Mode d'emploi :
     // Entrée : 1er paramètre = départ ; 2e paramètre = arrivee ; 3eme paramètre = liste des trajets intermédiaires
     // Contrat :
-    //
+    // Aucun
 
     virtual ~TrajetComposee( ); 
     // Mode d'emploi :
-    // 
+    // Aucun
     // Contrat :
-    // 
+    // Aucun
+
 //------------------------------------------------------------------ PRIVE
 
 protected:

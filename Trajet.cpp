@@ -3,12 +3,12 @@
 			   des classes TrajetSimple et TrajetCompose. Elle permet
 			   le partage d'attributs et de méthodes.
                              -------------------
-    début                : $22/11/23$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
+    début                : $29/11/2023$
+    copyright            : (C) $2023$ Par $Eleonore/Martin/Morgane/Marc$
+    e-mail               : eleonore.dugast@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la classe <Ensemble> (fichier Ensemble.cpp) ------------
+//---------- Réalisation de la classe <Trajet> (fichier Trajet.cpp) ------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -20,26 +20,28 @@ using namespace std;
 //------------------------------------------------------ Include personnel
 #include "Trajet.h"
 
-
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
 char* Trajet::GetDepart() const
+// Algorithme : Renvoie le nom de la ville de départ du trajet.
 {
      return(this->depart);
-}
+} 
+//----- Fin de GetDepart
 
 char* Trajet::GetArrivee() const
+// Algorithme : Renvoie le nom de la ville d'arrivée du trajet.
 {
      return(this->arrivee);
-}
+} 
+//----- Fin de GetArrivee
 
 //-------------------------------------------- Constructeurs - destructeur
 
 Trajet::Trajet (char* ville1, char* ville2)
-// Algorithme :
 {
     #ifdef MAP
         cout << "Appel au constructeur de Trajet" << endl;
@@ -51,7 +53,7 @@ Trajet::Trajet (char* ville1, char* ville2)
     strcpy(this->depart, ville1);
     strcpy(this->arrivee, ville2);
 
-} //----- Fin de Ensemble
+} //----- Fin du constructeur
 
 
 Trajet::~Trajet ( )
@@ -63,8 +65,7 @@ Trajet::~Trajet ( )
     delete [] this->depart;
     delete [] this->arrivee;
 } 
-//----- Fin de ~Trajet
-
+//----- Fin de du destructeur
 
 //------------------------------------------------------------------ PRIVE
 

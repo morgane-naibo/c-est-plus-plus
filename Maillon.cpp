@@ -1,12 +1,15 @@
 /*************************************************************************
-                           Xxx  -  description
+                           Maillon  -  
+                           La classe Maillon représente les maillons de 
+                           la liste chainée. Un maillon est composé d'un
+                           objet de type Trajet et d'un pointeur vers le
+                           maillon suivant.
                              -------------------
-    début                : $DATE$
-    copyright            : (C) $YEAR$ par $AUTHOR$
-    e-mail               : $EMAIL$
+    début                : $29/11/23$
+    copyright            : Par $Eleonore/Martin/Morgane/Marc$
 *************************************************************************/
 
-//---------- Réalisation de la classe <Xxx> (fichier Xxx.cpp) ------------
+//---------- Réalisation de la classe <Maillon> (fichier Maillon.cpp) ----
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -23,52 +26,56 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-//#define MAP
-// type Xxx::Méthode ( liste des paramètres )
-// Algorithme :
-//
-//{
-//} //----- Fin de Méthode
-void Maillon::AfficherMaillon() const{
+
+
+void Maillon::AfficherMaillon() const
+// Algorithme : Cette méthode utilise la méthode Afficher() de l'objet Trajet 
+// contenu dans le maillon pour afficher les détails du trajet.
+{
     T->Afficher();
 }
+//----- Fin de AfficherMaillon
 
-void Maillon::ChangerPointeur(Maillon * pointeur){
+void Maillon::ChangerPointeur(Maillon * pointeur)
+// Algorithme : Cette méthode permet de changer le pointeur suivant du maillon.
+{
     pointeurSuivant = pointeur;
 }
+//----- Fin de ChangerMaillon
 
-Maillon* Maillon::GetMaillonSuivant(){
+Maillon* Maillon::GetMaillonSuivant()
+// Algorithme : Renvoie le pointeur vers le maillon suivant.
+{
     return pointeurSuivant;
 }
+//----- Fin de GetMaillonSuivant
 
-Trajet * Maillon::GetTrajet() const{
+Trajet * Maillon::GetTrajet() const
+// Algorithme : Renvoie le pointeur vers l'objet Trajet contenu dans le maillon.
+{
     return T;
 }
+//----- Fin de GetTrajet
 
 //-------------------------------------------- Constructeurs - destructeur
 
-
 Maillon::Maillon (Trajet * T1, Maillon * pointeur )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Maillon>" << endl;
 #endif
+  
 T = T1;
 pointeurSuivant = pointeur;
-} //----- Fin de Xxx
+} 
 
 
 Maillon::~Maillon ( )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au destructeur de <Maillon>" << endl;
 #endif
-} //----- Fin de ~Xxx
-
+} 
 
 //------------------------------------------------------------------ PRIVE
 
