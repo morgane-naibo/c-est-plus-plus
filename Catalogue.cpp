@@ -64,30 +64,33 @@ bool Catalogue::TrouverTrajet(char* ville1, char* ville2)
 
 }
 
-bool Catalogue::ChercherTrajet(char* ville1, char* ville2,int index)
-// Algorithme : methode de recherche récursive. On boucle tant qu'on n'a pas trouvé une suite de trajets permettant
-// de partir de ville1 à ville2.
-{
+bool Catalogue::ChercherTrajet(char* ville1, char* ville2,int indexvisites[100]){
     Maillon * current = (*list).GetHead();
     Trajet * currentT = ((*current).GetTrajet());
-    while(current != nullptr && index<100){
-        if (strcmp((*currentT).GetDepart(),ville1)==0 && strcmp((*currentT).GetArrivee(),ville2)==0){
-            cout << "Il est cependant possible d'aller du départ à l'arrivée en joignant plusieurs itinéraires du catalogue."<<endl;
+    int index = 0;
+    while(current != nullptr){
+        if (indexvisites[index]==1);
+        else if (strcmp((*currentT).GetDepart(),ville1)==0 && strcmp((*currentT).GetArrivee(),ville2)==0){
+            cout << "Il est cependant possible d'aller du départ à l'arrivée en joignant plusieurs itinéraires du catalogue, en effectuant ces trajets dans l'ordre inverse:"<<endl;
+            currentT->Afficher();
             return true;
         }
         else if (strcmp((*currentT).GetDepart(),ville1)==0){
-                if (ChercherTrajet((*currentT).GetArrivee(), ville2,index)) {
-                    cout << (*currentT).GetArrivee()<<endl;
-                    return true; 
-                }
-        }
+            indexvisites[index]=1;
+            if (ChercherTrajet((*currentT).GetArrivee(), ville2,indexvisites)) {
+                currentT->Afficher();
+                return true;
+            }
+            }
+        
         current= (*current).GetMaillonSuivant();
-        currentT = ((*current).GetTrajet());
+        if (current!=nullptr){
+        	currentT = ((*current).GetTrajet());
+        }
         index++;
     }
     return false;
 }
-
  void Catalogue::AjouterTrajet(Maillon * nouveau)
  {
      list->Insertion(nouveau);

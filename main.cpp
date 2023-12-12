@@ -20,7 +20,6 @@ int main()
     Liste *trajets = nullptr;   
     Catalogue *catalogue = nullptr;
 
-    int size;
     char lecture[100];
     // if (fscanf(stdin,"%99s",lecture)!=1)
     // error();
@@ -79,7 +78,6 @@ int main()
             char *villearr;
             printf("Nombre de trajets ? (ex : A->B->C : nombre de trajets = 2)\r\n");
             scanf("%d", &nbtrajets);
-            bool vide = true;
             printf("Préparez vous à rentrer chaque sous trajet individuellement : sur l'exemple précendent, rentrez A et B, puis B et C avec les moyens de transport associés.\r\n");
             // Pour le premier trajet simple du trajet composé
             char *ville1;
@@ -174,14 +172,14 @@ int main()
             {
                 bool test = catalogue->TrouverTrajet(ville1, ville2);
                 if (test == false){
-                    catalogue->ChercherTrajet(ville1,ville2);
+                    int indexvisites[100];
+                    for (int j =0; j< 100;j++){
+                        indexvisites[j]=0;
+                    }
+                    catalogue->ChercherTrajet(ville1,ville2,indexvisites);
                 }
-            }
-            else
-            {
-                printf("Le catalogue est vide\r\n");
-            }
-        }
+        	}
+       	}
         else if (strcmp(lecture, "Print") == 0) {
             if (catalogue != nullptr) {
                 catalogue->AfficherCatalogue();

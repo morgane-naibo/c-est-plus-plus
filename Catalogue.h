@@ -51,7 +51,7 @@ public:
     // Contrat :
     // Aucun
 
-    bool ChercherTrajet(char* ville1, char* ville2,int index=0);
+    bool ChercherTrajet(char* ville1, char* ville2,int indexvisites[100]);
     // Mode d'emploi :
     // Entrée : ville 1 = départ ; ville 2 = arrivée
     // Contrat :

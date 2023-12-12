@@ -8,7 +8,7 @@ main.o: main.cpp
 	$(CXX) -c $(CXXFLAGS) main.cpp
 
 Trajet.o: Trajet.cpp
-	$(CXX) -c  $(CXXFLAGS)Trajet.cpp
+	$(CXX) -c  $(CXXFLAGS) Trajet.cpp
 	
 TrajetSimple.o: TrajetSimple.cpp
 	$(CXX) -c $(CXXFLAGS) TrajetSimple.cpp
